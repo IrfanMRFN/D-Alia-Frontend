@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = "http://srv559785.hstgr.cloud";
+  const url = import.meta.env.VITE_API_URL;
   const [token, setToken] = useState("");
   const [foodList, setFoodList] = useState([]);
   const [loggedIn, setLoggedIn] = useState(false);
